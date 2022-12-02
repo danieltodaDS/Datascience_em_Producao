@@ -4,7 +4,7 @@ from flask import Flask, Response, request
 from rossmann.Rossmann import Rossmann
 
 # loading model
-model = pickle.load (open('/home/daniel/repos/ds_em_producao/Datascience_em_Producao/rossman.pkl', 'rb'))
+model = pickle.load (open('/home/daniel/repos/ds_em_producao/Datascience_em_Producao/rossmann.pkl', 'rb'))
 # quando a API iniciar ela carregara o modelo em memoria e com endpoint ativo
 # ae receber uma requisao, ela prepara os dados, passa pro modelo, recebe a previsao, anexa nos dados 
 # passados pelo usuario, e retorna

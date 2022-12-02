@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+pdf_notebooks
+pdf_notebooks/
+m0*
