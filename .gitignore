@@ -130,3 +130,6 @@ dmypy.json
 pdf_notebooks
 pdf_notebooks/
 m0*
+rossmann-telegram-api
+m10_store_sales_prediction_deploy_model.ipynb
+webapp/
