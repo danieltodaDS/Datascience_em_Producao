@@ -6,7 +6,7 @@
 
 *obs: Still the dataset and the company are real, the business problem is ficticious. The dataset was collected from [Kaggle]*
 
-
+------------------
 ### Business Problem
 
   Rossmann is a drugstore chain that operates over 3000 stores in 7 European country. Rossmann's CFO required from the managers a forecast of the sales of each store, because he needs to assure that will have enough budget to make the renovation of them. 
@@ -16,7 +16,7 @@
   * Delevop a sales prediction for next 6 weeks for each store to ensure taht budget 
   * Deploy the model of predictions on a Telegram Bot
  
-
+--------------------------
 ### Business Assumption
 
 
