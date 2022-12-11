@@ -89,7 +89,7 @@ Though Random Forest Regressor obtained the lower RMSE, **XGBoost** was the chos
 
 | Model             | MAE     | MAPE  | RMSE    |
 | :---              | ---:    | ---:  | ---:    |
-| XGBoost Regressor | 1069.75	| 0.16	| 1560.49 |
+| XGBoost Regressor | 1084.09	| 0.16	| 1575.98 |
 
 #### Metrics definition and interpretation
 
@@ -105,12 +105,25 @@ Both MAE and MAPE, indicate the average error in absolute and relative terms, re
 
 ### Business Results
 
+Recapping the business problem, the CFO needs to have 6 six weeks of prediction sales, in order to have the necessary budget to reform the stores. The answer to this question is presented below in an aggregate value (total sum of sales), as well as the best and worst scenarios, calculated from the MAE. 
 
+| Scenario       | Values             | 
+| :---           | ---:               | 
+| Predictions    |  $ 276,156,800.00  |  
+| Worst Scenario |  $ 275,390,761.93  | 
+| Best Scenario  |  $ 276,922,824.34  |  
+
+Considering the 1115 stores, it gives a mean of $ 247674/store in the next 6 weeks. The prediction for each store can be seem in the [Telegram BOT](...) 
 
 --------------------------
 
 ### Lessons Learned
 
+
 --------------------------
 
 ### Next Steps
+
+--------------------------
+
+### Conclusion 
