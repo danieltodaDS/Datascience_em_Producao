@@ -76,11 +76,22 @@ At this project, six models was trained:
 
 ### Machine Learning Models Performance   
 
-After cross-validation (except for the average model) it obtained the following results:
+After time series cross-validation (except for the average model) it obtained the following results:
 
-[[[[TABLE]]]]
+| Model                   | MAE               | MAPE          | RMSE |
+| :---                    |     ---:          |          ---: | ---:             |
+| Linear Regression       | 2094.24+/-301.77  | 0.3+/-0.02	  | 2094.24+/-301.77 |
+| Lasso Regression        | 2388.68+/-398.48  | 0.34+/-0.01	  | 2388.68+/-398.48 |
+| Random Forest Regressor | 842.21+/-236.42	  | 0.12+/-0.03   | 842.21+/-236.42  |
+| XGBoost Regressor       | 1675.93+/-176.76  | 0.23+/-0.01	  | 1675.93+/-176.76 |
 
-### Metrics definition and interpretation
+Though Random Forest Regressor obtained the lower RMSE, **XGBoost** was the chosen model, because of its time of execution, and an RMSE low enough for the purpose of this project. Its parameter was tuned and the final performance on the test data obtained was:
+
+| Model             | MAE     | MAPE  | RMSE    |
+| :---              | ---:    | ---:  | ---:    |
+| XGBoost Regressor | 1069.75	| 0.16	| 1560.49 |
+
+#### Metrics definition and interpretation
 
 - MAE: Mean Absolute Error
 - MAPE: Mean Absolute Percentage Error
@@ -93,6 +104,8 @@ Both MAE and MAPE, indicate the average error in absolute and relative terms, re
 --------------------------
 
 ### Business Results
+
+
 
 --------------------------
 
