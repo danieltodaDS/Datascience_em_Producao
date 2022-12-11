@@ -98,7 +98,7 @@ Column "customer", which represents the number of customers, was dropped when tr
 ![image](https://user-images.githubusercontent.com/110186368/206879405-1c1f9aaa-9e35-4672-b2cc-7da2a1e0fae8.png)
 
 
-**2. Older competition has a correlation with a lowering in sales**
+**2. Older competition has a negative correlation with a lowering in sales**
 
 ![image](https://user-images.githubusercontent.com/110186368/206879580-d3265f2d-1ef3-41f0-8214-3aabcd840fe1.png)
 
