@@ -19,6 +19,53 @@
 --------------------------
 ### Business Assumption
 
+#### Data overview 
+<details>
+  <summary>Click to see the description of the columns</summary>
+  
+|Feature 	                        |Definition |
+| :---                            |     :---          |
+|Id 	                            |an Id that represents a (Store, Date) duple within the dataset.|
+|Store 	                          |a unique Id for each store.|
+|Sales 	                          |the turnover for any given day.|
+|DayOfWeek 	                      |day of week on which the sale was made (e.g. DayOfWeek=1 -> monday, DayOfWeek=2 -> tuesday, etc).|
+|Date                             |	date on which the sale was made.|
+|Customers                        |	the number of customers on a given day.|
+|Open                             |	an indicator for whether the store was open: 0 = closed, 1 = open.|
+|StateHoliday                     |	indicates a state holiday. Normally all stores, with few exceptions, are closed on state holidays. Note that all schools are closed on public holidays and weekends. a = public holiday, b = Easter holiday, c = Christmas, 0 = None.|
+|SchoolHoliday                    |	indicates if the (Store, Date) was affected by the closure of public schools.|
+|StoreType                        |	differentiates between 4 different store models: a, b, c, d.|
+|Assortment                       |	describes an assortment level: a = basic, b = extra, c = extended.|
+|CompetitionDistance              |	distance in meters to the nearest competitor store.|
+|CompetitionOpenSince(Month/Year) |	gives the approximate year and month of the time the nearest competitor was opened.|
+|Promo 	                          |indicates whether a store is running a promo on that day.|
+|Promo2 	                        |Promo2 is a continuing and consecutive promotion for some stores: 0 = store is not participating, 1 = store is participating.|
+|Promo2Since(Year/Week)           |	describes the year and calendar week when the store started participating in Promo2.|
+|PromoInterval                    |	describes the consecutive intervals Promo2 is started, naming the months the promotion is started anew. E.g. "Feb,May,Aug,Nov" means each round starts in February, May, August, November of any given year for that store.|
+  
+</details>
+
+#### Assumptions
+
+For missing values in the column "competition_distance" we assume that there is no competitor nearby, and then it was replaced for a greater value than the maximum value of "competition_distance" 
+
+Column "customer", which represents the number of customers, was dropped when training the model since there is no information about this number in the future 
+
+<details>
+  <summary>Click to see the new features created</summary>
+  
+  |New Feature 	                                                                                         | Definition                                     | 
+  | :---                                                                                                 |     :---                                       |
+  |year/month/day/week_of_year/year_week                                                                 | year/month/day/week_of_year/year_week extraced from the column 'date'                 |
+  |day_sin/day_cos/month_sin/month_cos/week_of_year_sin/week_of_year_cos/day_of_week_sin/day_of_week_cos | features derived in sin/cos to capture their ciclycal atribute                      |
+  |competition_since                                                                                     | date since the competition was opened          |
+  |competiton_time_month                                                                                 | period in months since the competition started |
+  |promo_since                                                                                           | concatenation of 'promo2_since_year' and 'promo2_since_week'    
+  |promo_time_week                                                                                       | time in weeks from when the promotion was active.                                |
+  |state_holiday(christmas/easter_holiday/public_holiday/regular_day)                                    | indicates wheter the sale was made in christmas, easter, public holiday or regular day. |
+  |is_promo2                                                                                             | whether the purchase occurred during an active promo2 (1) or not (0)                  |
+</details>
+
 --------------------------
 ### Solution Strategy
 
@@ -117,11 +164,11 @@ Considering the 1115 stores, it gives a mean of $ 247674/store in the next 6 wee
 
 #### Model Deployment
 
-The prediction for each store for next 6 weeks can be acess in a Telegram Bot. The ideia behind is that the results can be acess in any time for any device with proper internet connection. 
+The prediction for each store for the next 6 weeks can be accessed in a Telegram Bot. The ideia behind this is that the results can be acessed at any time with any device with a proper internet connection. 
 
-To use this bot, you have to inform the id store, after passed a / (e.g. /12, /34, etc). 
+To use this bot, you have to inform the id store, after passing a / (e.g. /12, /34, etc). 
 
-Link to chat with Telegram Bot <a ref="https://t.me/sales_predictor_bot"> <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"> </a>
+Link to chat with Telegram Bot <a href = "https://t.me/sales_predictor_bot" rel="nofollow"> <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"> </a>
 
 --------------------------
 
