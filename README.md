@@ -121,6 +121,8 @@ The prediction for each store for next 6 weeks can be acess in a Telegram Bot. T
 
 To use this bot, you have to inform the id store, after passed a / (e.g. /12, /34, etc). 
 
+Link to chat with Telegram Bot <a ref="https://t.me/sales_predictor_bot"> <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"> </a>
+
 --------------------------
 
 ### Lessons Learned
