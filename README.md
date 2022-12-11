@@ -113,7 +113,13 @@ Recapping the business problem, the CFO needs to have 6 six weeks of prediction 
 | Worst Scenario |  $ 275,390,761.93  | 
 | Best Scenario  |  $ 276,922,824.34  |  
 
-Considering the 1115 stores, it gives a mean of $ 247674/store in the next 6 weeks. The prediction for each store can be seem in the [Telegram BOT](...) 
+Considering the 1115 stores, it gives a mean of $ 247674/store in the next 6 weeks. 
+
+#### Model Deployment
+
+The prediction for each store for next 6 weeks can be acess in a Telegram Bot. The ideia behind is that the results can be acess in any time for any device with proper internet connection. 
+
+To use this bot, you have to inform the id store, after passed a / (e.g. /12, /34, etc). 
 
 --------------------------
 
