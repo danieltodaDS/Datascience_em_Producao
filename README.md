@@ -182,4 +182,4 @@ Link to chat with Telegram Bot <a href = "https://t.me/sales_predictor_bot" rel=
 
 ### Conclusion 
 
-This project could adreess the requisition of CFO and make predictions of 6 six weeks of sales of each store. Then it will be possible to estimate the budget under disposal to make the renovation of stores and a Telegram Bot to access this information with device connected to internet
+This project could address the requisition of a CFO and make predictions of 6 six weeks of sales for each store. Then it will be possible to estimate the budget under disposal to make the renovation of stores and a Telegram Bot to access this information with a device connected to the internet
