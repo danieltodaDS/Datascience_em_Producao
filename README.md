@@ -172,13 +172,14 @@ Link to chat with Telegram Bot <a href = "https://t.me/sales_predictor_bot" rel=
 
 --------------------------
 
-### Lessons Learned
-
-
---------------------------
-
 ### Next Steps
+
+- Improve the EDA to find out more insights
+- Test other machine learning algorithms
+- Forecast of the number of customers, since this feature has a high correlation with sales
 
 --------------------------
 
 ### Conclusion 
+
+This project could adreess the requisition of CFO and make predictions of 6 six weeks of sales of each store. Then it will be possible to estimate the budget under disposal to make the renovation of stores and a Telegram Bot to access this information with device connected to internet
